@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email template</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+  }
+
+  .navbar {
+    background-color: #57545465;
+  }
+
+  .nav-link {
+    font-size: 20px !important;
+  }
+
+  .offcanvas-body {
+    height: 50vh !important;
+  }
+
+  .ul-text li {
+    list-style: none;
+  }
+
+  .ul-text a {
+    text-decoration: none;
+
+  }
+
+  #bg-video {
+    min-width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .over-lay {
+    position: absolute;
+    background-color: rgba(31, 39, 43, 0.548);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .first-text h1 {
+    margin-top: 200px;
+    margin-bottom: 20px;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: black;
+    letter-spacing: 1px;
+  }
+
+  .text-h1 {
+    font-size: 45px !important;
+  }
+
+  .join-btn {
+    border-radius: 50px !important;
+  }
+
+  .icon {
+    border: 10px solid #fded09c0;
+    height: 5pc;
+    width: 5pc;
+    border-radius: 50px;
+  }
+
+  .border-rounded {
+    box-shadow: 0 0 10px #fff;
+    border-radius: 20px;
+  }
+
+  .border-rounded:hover,
+  .icon:hover {
+    box-shadow: 0 0 10px #fded09;
+  }
+
+  .position-top {
+    position: relative;
+    bottom: 20px;
+  }
+
+  .container {
+
+    animation-name: fade-in-top;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+
+  }
+
+  .accordion-item {
+    background: rgba(255, 255, 255, 0.048) !important;
+    color: white !important;
+  }
+
+  @keyframes fade-in-top {
+
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .benefit h1 {
+    font-size: 50px !important;
+  }
+
+  .company-img {
+    height: 70px;
+  }
+
+  .hight-img {
+    height: 50vh;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .hight-img1 {
+    height: 55vh;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .increase-font {
+    font-size: 15px;
+  }
+
+  .bg-color {
+    background: #ffffff1d;
+  }
+
+
+
+  @media (max-width:600px) {
+    .text-h1 {
+      font-size: 30px !important;
+    }
+
+    .position-top {
+      position: relative;
+      bottom: 80px;
+    }
+
+    .benefit h1 {
+      font-size: 24px !important;
+    }
+
+    .offcanvas {
+      height: 50vh !important;
+    }
+
+    .hight-img {
+      height: 40vh;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 150px;
+    }
+
+    .hight-img1 {
+      height: 40vh;
+      border-bottom-right-radius: 150px;
+    }
+  }
+</style>
+
+<body>
+  <nav class="navbar fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <h1 class="fw-bold text-light">DORC <span class="text-warning">TEMPLATE</span></h1>
+      </a>
+      <div class="d-md-block d-none">
+        <ul class="d-flex ul-text fw-bold px-5 fs-5 py-4 gap-md-4">
+          <li><a href="" class="text-warning">HOME</a></li>
+          <li><a href="" class="text-light">ABOUT</a></li>
+          <li><a href="" class="text-light">PRODUCT/SERVICES</a></li>
+          <li><a href="" class="text-light">BLOG</a></li>
+          <li><a href="" class="text-light">CONTACT</a></li>
+        </ul>
+      </div>
+
+      <button class="navbar-toggler d-md-none d-block " type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-warning fw-bold fs-4" id="offcanvasNavbarLabel">DORC TEMPLATE</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav  justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active text-warning" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Product/services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="">
+    <video autoplay muted loop id="bg-video">
+      <source src="/image/course-video.mp4" type="video/mp4" />
+    </video>
+  </section>
+  <section class="over-lay">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="first-text">
+            <h1 class="text-light col-md-5 text-h1">WELCOME TO<span class="text-warning"> DORC</span> EMAIL TEMPLATE
+            </h1>
+            <p class="text-light fs-5 col-md-6">
+              This is an edu meeting HTML CSS template provided by Ayomide Adeshola.And this is also a bootstrap v5.3
+              layout.</p>
+            <div>
+              <button class="btn join-btn py-2 mt-3 btn-warning text-light fw-bold">JOIN US NOW!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service" style="background-image:url(./image/meetings-bg.jpg) ;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="d-md-flex position-top gap-md-2 mx-auto mt-3 mt-md-0">
+            <div class=" col-md-4 border-rounded bg-dark">
+              <div class="icon mx-auto text-center mt-5 mb-3">
+                <img src="./image/service-icon-01.png" alt="">
+              </div>
+              <div class="text-content pb-4">
+                <h3 class="text-light text-center fw-bold mt-3  mb-3">Generate Email</h3>
+                <p class="text-center text-light px-4 fw-bold"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Labore voluptatum facere, molestiae omnis ab architecto consectetur unde placeat mollitia nesciunt eos
+                  ut dicta?</p>
+              </div>
+
+            </div>
+            <div class=" col-md-4 border-rounded bg-dark">
+              <div class="icon mx-auto text-center mt-5 mb-3">
+                <img src="./image/service-icon-03.png" alt="">
+              </div>
+              <div class="text-content pb-4">
+                <h3 class="text-light text-center fw-bold mt-3  mb-3">Strong Email </h3>
+                <p class="text-center text-light px-4 mb-4 fw-bold"> Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Labore voluptatum facere, molestiae omnis ab architecto consectetur unde placeat mollitia
+                  nesciunt eos ut dicta?</p>
+              </div>
+
+            </div>
+            <div class=" col-md-4 border-rounded bg-dark">
+              <div class="icon mx-auto text-center mt-5 mb-3">
+                <img src="/image/service-icon-02.png" alt="">
+              </div>
+              <div class="text-content pb-4">
+                <h3 class="text-light text-center fw-bold mt-3  mb-3">Secure Email </h3>
+                <p class="text-center text-light px-4 mb-4 fw-bold"> Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Labore voluptatum facere, molestiae omnis ab architecto consectetur unde placeat mollitia
+                  nesciunt eos ut dicta?</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="benefit">
+      <h1 class="text-light col-md-7 mx-auto mt-5 text-center fw-bold">Used by the Biggest Companies
+        Worldwide</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="d-md-flex justify-content-between pb-4">
+              <img class="company-img col-12  gap-md-2 mt-3 mt-md-5 col-md-2"
+                src="https://getemail.io/wp-content/uploads/oracle.jpg" alt="">
+              <img class="company-img col-12  gap-md-2 mt-3 mt-md-5 col-md-2"
+                src="https://getemail.io/wp-content/uploads/IBM.png" alt="">
+              <img class="company-img col-12  gap-md-2 mt-3 mt-md-5 col-md-2"
+                src="https://getemail.io/wp-content/uploads/Google.png" alt="">
+              <img class="company-img col-12  gap-md-2 mt-3 mt-md-5 col-md-2"
+                src="https://getemail.io/wp-content/uploads/shopify.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="d-md-flex mt-5 py-5  gap-md-5">
+                <img class="hight-img col-md-6 col-12"
+                  src="https://getemail.io/wp-content/uploads/blog-post-20-1030x644.jpg" alt="">
+                <div>
+                  <h2 style="border-bottom: 4px solid #f4d50eba;" class="col-4 text-light fw-bold ">How it works</h2>
+                  <p class="text-light col-md-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nostrum
+                    velit veritatis, minus incidunt iusto distinctio aut dolorem fugit consequuntur ipsam eveniet
+                    tempora perferendis commodi veniam iure, repellat porro et officiis assumenda itaque. Neque animi
+                    quaerat accusantium natus voluptatum sit, cupiditate repellat magnam excepturi, quisquam at itaque
+                    repudiandae commodi quidem itaque repudiandae commodi quidem itaque repudiandae commodi quidem</p>
+                  <p class="text-light col-md-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nostrum
+                    velit veritatis, minus incidunt iusto distinctio aut dolorem fugit consequuntur ipsam eveniet
+                    tempora perferendis commodi veniam iure, repellat porro et officiis assumenda itaque. Neque animi
+                    quaerat accusantium natus voluptatum sit, cupiditate repellat magnam excepturi, quisquam at itaque
+                    repudiandae commodi quidem itaque repudiandae commodi quidem.</p>
+
+                </div>
+              </div>
+              <div class="d-md-flex mt-4 gap-md-5">
+                <img class="hight-img1 col-md-6 col-12 d-md-none d-block"
+                  src="./image/cheerful-woman-holding-sign_53876-15197.avif" alt="">
+                <div>
+                  <h2 style="border-bottom: 4px solid #f4d50eba;" class="col-7 text-light fw-bold ">How it is being
+                    created</h2>
+                  <p class="text-light col-md-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nostrum
+                    velit veritatis, minus incidunt iusto distinctio aut dolorem fugit consequuntur ipsam eveniet
+                    tempora perferendis commodi veniam iure, repellat porro et officiis assumenda itaque. Neque animi
+                    quaerat accusantium natus voluptatum sit, cupiditate repellat magnam excepturi, quisquam at itaque
+                    repudiandae commodi quidem itaque repudiandae commodi quidem itaque repudiandae commodi quidem</p>
+                  <p class="text-light col-md-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nostrum
+                    velit veritatis, minus incidunt iusto distinctio aut dolorem fugit consequuntur ipsam eveniet
+                    tempora perferendis commodi veniam iure, repellat porro et officiis assumenda itaque. Neque animi
+                    quaerat accusantium natus voluptatum sit, cupiditate repellat magnam excepturi, quisquam at itaque
+                    repudiandae commodi quidem itaque repudiandae commodi quidem.</p>
+
+                </div>
+                <img class="hight-img1 col-md-6 col-12 d-md-block d-none"
+                  src="./image/cheerful-woman-holding-sign_53876-15197.avif" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </section>
+
+  <section style="background-image: url(./image/apply-bg.jpg);" class="about pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-ms-12 ">
+          <div class="d-md-flex justify-content-between mt-5">
+            <div class="">
+              <div class=" bg-color col-md-9 px-4 rounded pb-5 ">
+                <h2 class="text-light fw-bold mt-5">APPLY AND GET STRONG EMAIL</h2>
+                <p class="text-light increase-font mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                  suscipit quia voluptatibus dignissimos fugiat ipsum iure blanditiis quis commodi earum!</p>
+                <div class="">
+                  <button class="btn join-btn btn-danger fw-bold">JOIN US NOW!</button>
+                </div>
+              </div>
+              <div class=" bg-color col-md-9 px-4 rounded pb-5 ">
+                <h2 class="text-light fw-bold mt-5">APPLY AND GET STRONG EMAIL</h2>
+                <p class="text-light increase-font mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                  suscipit quia voluptatibus dignissimos fugiat ipsum iure blanditiis quis commodi earum!</p>
+                <div class="">
+                  <button class="btn join-btn btn-warning fw-bold text-light">JOIN US NOW!</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 mt-5  py-1">
+
+              <div class="accordion " id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <h3 class="text-warning fw-bold mt-3 fs-3"> About DORC email template</h3>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolorum minus modi culpa cum
+                        animi cumque, natus temporibus vitae provident facere explicabo mollitia, dicta saepe ipsa ullam
+                        necessitatibus at quibusdam provident facere explicabo mollitia, dicta saepe ipsa ullam
+                        necessitatibus at quibusdam.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <h3 class="fw-bold text-warning mt-5 pb-4"> Tell friends</h3>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolorum minus modi culpa cum
+                        animi cumque, natus temporibus vitae provident facere explicabo mollitia, dicta saepe ipsa ullam
+                        necessitatibus at quibusdam provident facere explicabo mollitia, dicta saepe ipsa ullam
+                        necessitatibus at quibusdam.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <h3 class="fw-bold text-warning mt-4 pb-4"> Invite people </h3>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolorum minus modi culpa cum
+                        animi cumque, natus temporibus vitae provident facere explicabo mollitia, dicta saepe ipsa ullam
+                        necessitatibus at quibusdam provident facere explicabo mollitia, dicta saepe ipsa ullam
+                        necessitatibus at quibusdam.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+
+            <h1 style="border-bottom: 5px solid #f4d50eba;" class="col-1  text-center text-light mt-5 fw-bold">Contact
+            </h1>
+
+            <div class="d-md-flex gap-md-3">
+              <div class="bg-color col-md-2 pb-5">
+                <div class="icons text-center ">
+                  <i class="bi bi-geo-alt-fill fs-1 text-warning"></i>
+                </div>
+                <h4 class="text-light text-center fw-bold">Address</h4>
+                <p class="text-light  text-md-start text-center px-4 pb-3">King david area, ogbomoso, oyo state</p>
+              </div>
+              <div class="bg-color col-md-2">
+                <div class="icons text-center mt-3">
+                  <i class="bi bi-telephone-fill fs-1 text-warning"></i>
+                </div>
+                <h4 class="text-light text-center fw-bold">Call us</h4>
+                <p class="text-light  text-md-start text-center  px-4 pb-3">+2348069697526 <br>
+                  +2348055788097
+                </p>
+
+              </div>
+            </div>
+
+            <div class="d-md-flex mt-3 gap-md-3">
+              <div class="bg-color col-md-2">
+                <div class="icons text-center mt-3">
+                  <i class="bi bi-geo-alt-fill fs-1 text-warning"></i>
+                </div>
+                <h4 class="text-light text-center fw-bold">Open hours</h4>
+                <p class="text-light px-2 text-md-start text-center pb-3">josephay125d@gmail.com <br>
+                  adeshiolajoseph99@gmail.com
+                </p>
+              </div>
+              <div class="bg-color col-md-2">
+                <div class="icons text-center mt-3">
+                  <i class="bi bi-alarm-fill fs-1 text-warning"></i>
+                </div>
+                <h4 class="text-light text-center  fw-bold">Open time</h4>
+                <p class=" text-md-start text-center  text-light px-4 pb-3">Monday - Friday <br>
+                  9:00AM - 05:00PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section class="bg-dark pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 ">
+          <div class="d-md-flex gap-md-3 justify-content-between">
+            <div class="col-md-4 ">
+              <h1 class="mt-4 fw-bold text-light">DORC-TEMP</h1>
+              <p class="col-md text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati cum error
+                quia autem accusantium labore soluta maiores, corrupti aliquid iusto.</p>
+                <div class="d-md-flex text-light gap-md-3 gap-5 mt-md-5 mt-4">
+                  <i class="bi bi-instagram fs-5"></i>
+                  <i class="bi bi-twitter fs-5"></i>
+                  <i class="bi bi-facebook fs-5"></i>
+                  <i class="bi bi-youtube fs-5"></i>
+                  <i class="bi bi-linkedin fs-5"></i>
+                </div>
+            </div>
+            <div class="col-md-8 mt-5 d-md-flex gap-md-5 mt-5 text-light">
+              <div>
+                <h4 class="text-light fw-bold">Useful Links</h4>
+                <div class="mt-3"> Home</div>
+                <div class="mt-3">Legal and Privacy Information</div>
+                <div class="mt-3">Services </div>
+                <div class="mt-3">Terms of service </div>
+                <div class="mt-3">Privacy policy </div>
+              </div>
+
+              <div>
+                <h4 class="text-light fw-bold">Our Services</h4>
+                <div class="mt-3">Accessibility</div>
+                <div class="mt-3">About us </div>
+                <div class="mt-3">Strong email </div>
+                <div class="mt-3">Secure email</div>
+                <div class="mt-3">Reliable email</div>
+              </div>
+              <div>
+                <h4 class="text-light fw-bold">Our Services</h4>
+                <div class="mt-3">Accessibility</div>
+                <div class="mt-3">About us </div>
+                <div class="mt-3">Strong email </div>
+                <div class="mt-3">Secure email</div>
+                <div class="mt-3">Reliable email</div>
+              </div>
+              <div>
+                <h4 class="text-light fw-bold">Our Services</h4>
+                <div class="mt-3">Accessibility</div>
+                <div class="mt-3">About us </div>
+                <div class="mt-3">Strong email </div>
+                <div class="mt-3">Secure email</div>
+                <div class="mt-3">Reliable email</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </section>
+  <div class="bg-body-tertiary py-3">
+    <h5 class="text-center fw-bold text-secondary">
+      Copyright © 2023 | DORC TEMPLATE Consultants. All Rights Reserved.
+    </h5>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

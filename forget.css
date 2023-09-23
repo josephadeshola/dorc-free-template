@@ -1,0 +1,17 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+.drop{
+    background-color: #ed360d;
+  }
+  @media (max-width:600px) {
+       a{
+        text-decoration: none !important;
+        color: #fff !important;
+      }
+    
+  }
